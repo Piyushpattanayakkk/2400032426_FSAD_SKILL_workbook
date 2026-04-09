@@ -1,0 +1,80 @@
+:root {
+  --bg-color: #f4f8fb;
+  --text-color: #24313d;
+  --heading-color: #132230;
+  --muted: #617483;
+  --accent: #1976d2;
+  --accent-strong: #0f5aa5;
+  --accent-soft: #e3f2fd;
+  --input-border: #cfdae6;
+  --surface-edge: rgba(101, 118, 138, 0.16);
+  --page-shadow: 0 24px 56px rgba(25, 39, 56, 0.08);
+  --sans: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+  --heading: 'Aptos Display', 'Segoe UI Semibold', sans-serif;
+  font: 16px/1.5 var(--sans);
+  color: var(--text-color);
+  background:
+    radial-gradient(circle at top left, rgba(25, 118, 210, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbfdff 0%, var(--bg-color) 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  max-width: 1240px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 28px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--heading);
+  color: var(--heading-color);
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.4rem, 5vw, 4.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #eef6fd;
+  color: #0f5aa5;
+}
+
+@media (max-width: 640px) {
+  #root {
+    padding: 18px;
+  }
+}
