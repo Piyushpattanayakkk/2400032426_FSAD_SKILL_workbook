@@ -1,0 +1,239 @@
+.app-shell {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-banner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--surface-edge);
+  border-radius: 28px;
+  box-shadow: var(--page-shadow);
+}
+
+.hero-copy {
+  max-width: 56ch;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin: 0 0 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.stats-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.stat-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--surface-alt);
+  border: 1px solid var(--surface-edge);
+}
+
+.stat-card span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.stat-card strong {
+  font-size: 1.35rem;
+  color: var(--heading-color);
+}
+
+.status-banner {
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.error-banner {
+  color: #9a3412;
+  background: #fff1ea;
+  border: 1px solid #f8cfbe;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 380px) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.panel {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--surface-edge);
+  box-shadow: 0 16px 38px rgba(30, 41, 59, 0.06);
+}
+
+.panel-heading {
+  margin-bottom: 20px;
+}
+
+.panel-heading h2 {
+  margin-bottom: 8px;
+}
+
+.panel-copy {
+  color: var(--muted);
+}
+
+.student-form {
+  display: grid;
+  gap: 16px;
+}
+
+.student-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.student-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--input-border);
+  background: #fbfdfd;
+  font: inherit;
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-form input:focus {
+  outline: none;
+  border-color: rgba(0, 137, 123, 0.45);
+  box-shadow: 0 0 0 4px rgba(0, 137, 123, 0.12);
+}
+
+.form-actions,
+.row-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn,
+.danger-btn {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.danger-btn:hover {
+  transform: translateY(-1px);
+}
+
+.primary-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 12px 22px rgba(0, 137, 123, 0.18);
+}
+
+.secondary-btn {
+  color: var(--heading-color);
+  background: #edf4f5;
+  border: 1px solid #d7e4e6;
+}
+
+.danger-btn {
+  color: #ffffff;
+  background: #d84315;
+}
+
+.small-btn {
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+
+.primary-btn:disabled,
+.secondary-btn:disabled,
+.danger-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.table-shell {
+  overflow-x: auto;
+  border: 1px solid #e1e8ea;
+  border-radius: 18px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  background: #ffffff;
+}
+
+.student-table th,
+.student-table td {
+  padding: 16px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e9eef0;
+}
+
+.student-table th {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  background: #f7fbfb;
+}
+
+.student-table tbody tr:hover {
+  background: #f4faf9;
+}
+
+.table-feedback {
+  text-align: center !important;
+  color: var(--muted);
+  padding: 30px 14px !important;
+}
+
+@media (max-width: 960px) {
+  .hero-banner,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel,
+  .hero-banner {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .student-table {
+    min-width: 620px;
+  }
+}
